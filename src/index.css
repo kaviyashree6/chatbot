@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* MindfulMe Pastel Theme */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Pastel Blue Primary */
+    --primary: 216 77% 79%;
+    --primary-foreground: 222 47% 11%;
+
+    /* Lavender Secondary */
+    --secondary: 252 47% 89%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Soft Lavender Accent */
+    --accent: 252 47% 89%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 216 77% 79%;
+
+    --radius: 1rem;
+
+    /* Custom wellness colors */
+    --calm: 172 66% 76%;
+    --calm-foreground: 172 66% 20%;
+    --happy: 45 93% 77%;
+    --happy-foreground: 45 93% 20%;
+    --sad: 216 77% 79%;
+    --sad-foreground: 216 77% 20%;
+    --stressed: 0 68% 82%;
+    --stressed-foreground: 0 68% 20%;
+    --anxious: 280 55% 82%;
+    --anxious-foreground: 280 55% 20%;
+    --neutral: 210 20% 85%;
+    --neutral-foreground: 210 20% 20%;
+
+    /* Gradients */
+    --gradient-calm: linear-gradient(135deg, hsl(216 77% 85%) 0%, hsl(252 47% 92%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(216 77% 95%) 0%, hsl(252 47% 95%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-chat-user: linear-gradient(135deg, hsl(216 77% 85%) 0%, hsl(216 77% 79%) 100%);
+    --gradient-chat-bot: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(252 47% 97%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(216 77% 79% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(222 47% 11% / 0.1);
+    --shadow-float: 0 12px 40px -12px hsl(216 77% 79% / 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 216 77% 70%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 252 30% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 252 30% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 216 77% 70%;
+
+    --calm: 172 50% 40%;
+    --calm-foreground: 172 50% 95%;
+    --happy: 45 70% 50%;
+    --happy-foreground: 45 70% 95%;
+    --sad: 216 60% 50%;
+    --sad-foreground: 216 60% 95%;
+    --stressed: 0 50% 50%;
+    --stressed-foreground: 0 50% 95%;
+    --anxious: 280 40% 50%;
+    --anxious-foreground: 280 40% 95%;
+    --neutral: 210 15% 40%;
+    --neutral-foreground: 210 15% 95%;
+
+    --gradient-calm: linear-gradient(135deg, hsl(216 60% 25%) 0%, hsl(252 30% 20%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 10%) 0%, hsl(252 30% 12%) 50%, hsl(222 47% 8%) 100%);
+    --gradient-chat-user: linear-gradient(135deg, hsl(216 60% 35%) 0%, hsl(216 60% 30%) 100%);
+    --gradient-chat-bot: linear-gradient(135deg, hsl(222 47% 15%) 0%, hsl(252 30% 18%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
+    --shadow-float: 0 12px 40px -12px hsl(0 0% 0% / 0.6);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-calm {
+    background: var(--gradient-calm);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-float {
+    box-shadow: var(--shadow-float);
+  }
+
+  .chat-bubble-user {
+    background: var(--gradient-chat-user);
+    @apply rounded-2xl rounded-br-md px-4 py-3 shadow-soft;
+  }
+
+  .chat-bubble-bot {
+    background: var(--gradient-chat-bot);
+    @apply rounded-2xl rounded-bl-md px-4 py-3 shadow-soft border border-border;
+  }
+
+  .mood-card {
+    @apply rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer shadow-card;
+  }
+
+  .mood-happy {
+    @apply bg-happy text-happy-foreground;
+  }
+
+  .mood-calm {
+    @apply bg-calm text-calm-foreground;
+  }
+
+  .mood-sad {
+    @apply bg-sad text-sad-foreground;
+  }
+
+  .mood-stressed {
+    @apply bg-stressed text-stressed-foreground;
+  }
+
+  .mood-anxious {
+    @apply bg-anxious text-anxious-foreground;
+  }
+
+  .mood-neutral {
+    @apply bg-neutral text-neutral-foreground;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl rounded-2xl shadow-card border border-border/50;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-soft {
+    animation: bounceSoft 1s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes bounceSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
